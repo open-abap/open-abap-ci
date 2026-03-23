@@ -1,0 +1,7 @@
+CLASS cl_ci_source_include DEFINITION PUBLIC.
+  PUBLIC SECTION.
+ENDCLASS.
+
+CLASS cl_ci_source_include IMPLEMENTATION.
+
+ENDCLASS.
