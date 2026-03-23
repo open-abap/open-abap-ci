@@ -7,8 +7,8 @@ CLASS cl_ci_test_scan DEFINITION PUBLIC CREATE PUBLIC INHERITING FROM cl_ci_test
 
     METHODS get_include
       IMPORTING
-        p_ref_scan              TYPE REF TO cl_ci_scan OPTIONAL
-        p_level                 TYPE i OPTIONAL
+        p_ref_scan      TYPE REF TO cl_ci_scan OPTIONAL
+        p_level         TYPE i OPTIONAL
       RETURNING
         VALUE(p_result) TYPE string.
 
