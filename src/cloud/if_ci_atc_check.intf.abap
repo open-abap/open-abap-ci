@@ -4,7 +4,8 @@ INTERFACE if_ci_atc_check PUBLIC.
   TYPES ty_object TYPE string.
 
   METHODS get_meta_data
-    RETURNING VALUE(meta_data) TYPE REF TO if_ci_atc_check_meta_data.
+    RETURNING
+      VALUE(meta_data) TYPE REF TO if_ci_atc_check_meta_data.
 
   METHODS run
     IMPORTING
