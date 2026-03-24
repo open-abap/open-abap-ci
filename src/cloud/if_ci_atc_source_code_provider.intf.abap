@@ -238,13 +238,13 @@ INTERFACE if_ci_atc_source_code_provider PUBLIC.
   METHODS get_procedures
     IMPORTING compilation_unit  TYPE ty_compilation_unit
     RETURNING VALUE(procedures) TYPE REF TO ty_procedures
-    RAISING cx_ci_atc_invalid_comp_unit.
+    RAISING cx_static_check.
 
   METHODS get_called_procedure
     IMPORTING compilation_unit TYPE ty_compilation_unit
             calling_token      TYPE ty_token
     RETURNING VALUE(procedure) TYPE ty_procedure
-    RAISING cx_ci_atc_token_no_call.
+    RAISING cx_static_check.
 
   METHODS object_to_comp_unit
     IMPORTING object                  TYPE if_ci_atc_check=>ty_object

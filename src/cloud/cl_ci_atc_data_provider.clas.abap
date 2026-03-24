@@ -15,8 +15,8 @@ CLASS cl_ci_atc_data_provider DEFINITION PUBLIC.
     METHODS get_code_provider
       RETURNING VALUE(code_provider) TYPE REF TO if_ci_atc_source_code_provider.
 
-    METHODS get_checked_destination
-      RETURNING VALUE(checked_destination) TYPE REF TO if_rfc_dest.
+    " METHODS get_checked_destination
+    "   RETURNING VALUE(checked_destination) TYPE REF TO if_rfc_dest.
 
 ENDCLASS.
 
@@ -26,10 +26,6 @@ CLASS cl_ci_atc_data_provider IMPLEMENTATION.
   ENDMETHOD.
 
   METHOD get_code_provider.
-    RETURN. " todo, implement method
-  ENDMETHOD.
-
-  METHOD get_checked_destination.
     RETURN. " todo, implement method
   ENDMETHOD.
 

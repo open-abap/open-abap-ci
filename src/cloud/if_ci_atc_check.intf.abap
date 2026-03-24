@@ -52,7 +52,7 @@ INTERFACE if_ci_atc_check PUBLIC.
 
   METHODS set_attributes DEFAULT IGNORE
     IMPORTING attributes TYPE if_ci_atc_check_meta_data=>ty_attributes
-    RAISING cx_ci_atc_check_invalid_attr.
+    RAISING cx_static_check.
 
   METHODS verify_prerequisites
     RETURNING VALUE(verification_findings) TYPE ty_findings.
