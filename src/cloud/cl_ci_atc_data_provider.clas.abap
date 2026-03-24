@@ -2,11 +2,11 @@ CLASS cl_ci_atc_data_provider DEFINITION PUBLIC.
   PUBLIC SECTION.
 
     TYPES ty_source_id TYPE x LENGTH 16.
-    TYPES:
-      BEGIN OF ENUM ty_cache_policy STRUCTURE cache_policies,
-      use_all,
-      use_none,
-      END OF ENUM ty_cache_policy STRUCTURE cache_policies.
+
+    TYPES: BEGIN OF ENUM ty_cache_policy STRUCTURE cache_policies,
+             use_all,
+             use_none,
+           END OF ENUM ty_cache_policy STRUCTURE cache_policies.
 
     CLASS-METHODS main_program_from_comp_unit
       IMPORTING compilation_unit    TYPE if_ci_atc_source_code_provider=>ty_compilation_unit
@@ -26,7 +26,7 @@ CLASS cl_ci_atc_data_provider IMPLEMENTATION.
   ENDMETHOD.
 
   METHOD get_code_provider.
-    RETURN. " todo, implement method
+    RETURN. " todo
   ENDMETHOD.
 
 ENDCLASS.
