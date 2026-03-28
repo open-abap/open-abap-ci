@@ -113,7 +113,7 @@ CLASS cl_ci_test_root DEFINITION PUBLIC CREATE PUBLIC ABSTRACT.
         ABSTRACT
         IMPORTING
           p_test         TYPE string
-          p_code         TYPE string
+          p_code         TYPE char10
           p_sub_obj_type TYPE clike OPTIONAL
           p_sub_obj_name TYPE string OPTIONAL
           p_position     TYPE string OPTIONAL
