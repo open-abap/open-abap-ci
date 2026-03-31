@@ -56,6 +56,7 @@ CLASS cl_ci_scan DEFINITION PUBLIC.
     DATA levels TYPE ty_level_tab.
     DATA structures TYPE ty_structure_tab.
     DATA statements TYPE ty_statement_tab.
+    DATA statement_wa LIKE LINE OF statements.
     DATA tokens TYPE ty_token_tab.
     DATA aunit_tab TYPE ty_aunit_tab.
     DATA subrc TYPE i.
