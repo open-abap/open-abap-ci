@@ -65,7 +65,7 @@ CLASS cl_ci_scan DEFINITION PUBLIC.
 
     METHODS get_include
       RETURNING
-        VALUE(p_result) TYPE program.
+        VALUE(p_result) TYPE char40.
 
 ENDCLASS.
 
