@@ -14,7 +14,7 @@ CLASS cl_ci_test_root DEFINITION PUBLIC CREATE PUBLIC ABSTRACT.
 
     DATA: category          TYPE string,
           description       TYPE string,
-          object_type       TYPE string,
+          object_type       TYPE char4,
           object_name       TYPE char40,
           version           TYPE string,
           position          TYPE string,
