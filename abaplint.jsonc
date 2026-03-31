@@ -20,6 +20,7 @@
     "align_pseudo_comments": true,
     "invalid_table_index": true,
     "no_prefixes": false,
+    "catch_and_raise": true,
     "prefer_pragmas": true,
     "uncaught_exception": true,
     "add_test_attributes": true,

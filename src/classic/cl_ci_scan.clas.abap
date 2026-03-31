@@ -63,9 +63,16 @@ CLASS cl_ci_scan DEFINITION PUBLIC.
     METHODS constructor IMPORTING p_include TYPE any.
     METHODS determine_aunit_lines.
 
+    METHODS get_include
+      RETURNING
+        VALUE(p_result) TYPE char40.
+
 ENDCLASS.
 
 CLASS cl_ci_scan IMPLEMENTATION.
+  METHOD get_include.
+    RETURN. " todo, implement method
+  ENDMETHOD.
 
   METHOD constructor.
     RETURN.

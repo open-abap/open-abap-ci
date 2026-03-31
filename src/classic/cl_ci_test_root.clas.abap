@@ -116,7 +116,7 @@ CLASS cl_ci_test_root DEFINITION PUBLIC CREATE PUBLIC ABSTRACT.
           p_code         TYPE char10
           p_sub_obj_type TYPE clike OPTIONAL
           p_sub_obj_name TYPE string OPTIONAL
-          p_position     TYPE string OPTIONAL
+          p_position     TYPE i OPTIONAL
           p_line         TYPE i OPTIONAL
           p_column       TYPE string OPTIONAL
           p_errcnt       TYPE string OPTIONAL
