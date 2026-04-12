@@ -3,14 +3,14 @@ CLASS cl_ci_test_root DEFINITION PUBLIC CREATE PUBLIC ABSTRACT.
   PUBLIC SECTION.
     INTERFACES if_ci_test.
 
-    TYPES: BEGIN OF ty_message,
+    TYPES: BEGIN OF scimessage,
              test     TYPE string,
              code     TYPE string,
              kind     TYPE string,
              text     TYPE string,
              pcom     TYPE string,
              pcom_alt TYPE string,
-          END OF ty_message.
+          END OF scimessage.
 
     DATA: category          TYPE string,
           description       TYPE string,
@@ -24,7 +24,7 @@ CLASS cl_ci_test_root DEFINITION PUBLIC CREATE PUBLIC ABSTRACT.
           has_display_consolidation TYPE abap_bool,
           program_name      TYPE string,
           myname            TYPE string,
-          scimessages       TYPE STANDARD TABLE OF ty_message WITH DEFAULT KEY,
+          scimessages       TYPE STANDARD TABLE OF scimessage WITH DEFAULT KEY,
           no_aunit          TYPE string.
 
     DATA typelist TYPE scit_objt READ-ONLY.
