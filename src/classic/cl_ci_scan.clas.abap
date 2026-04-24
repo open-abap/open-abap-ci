@@ -61,7 +61,11 @@ CLASS cl_ci_scan DEFINITION PUBLIC.
     DATA aunit_tab TYPE ty_aunit_tab.
     DATA subrc TYPE i.
 
-    METHODS constructor IMPORTING p_include TYPE any.
+    METHODS constructor
+      IMPORTING
+        p_include     TYPE any OPTIONAL
+        p_scan_result TYPE cl_abap_comp_procs=>t_scan_result OPTIONAL.
+
     METHODS determine_aunit_lines.
 
     METHODS get_include
