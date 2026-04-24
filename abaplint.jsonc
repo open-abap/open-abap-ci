@@ -21,6 +21,7 @@
     "invalid_table_index": true,
     "no_prefixes": false,
     "catch_and_raise": true,
+    "no_exclamation_escape": true,
     "prefer_pragmas": true,
     "uncaught_exception": true,
     "add_test_attributes": true,
