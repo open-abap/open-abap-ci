@@ -5,7 +5,7 @@
   "description": "test",
   "scripts": {
     "unit": "rm -rf output && abap_transpile && echo RUNNING && node output/index.mjs",
-    "test": "abaplint"
+    "test": "abaplint && npm run unit"
   },
   "license": "",
   "dependencies": {
