@@ -50,44 +50,29 @@ CLASS cl_ci_test_root DEFINITION PUBLIC CREATE PUBLIC ABSTRACT.
 
     METHODS
       get_message_text
-        ABSTRACT
         IMPORTING
           p_test TYPE string
           p_code TYPE string
         EXPORTING
           p_text TYPE string.
 
-    METHODS
-      get_attributes
-        ABSTRACT
-        RETURNING
-          VALUE(p_attributes) TYPE string.
+    METHODS get_attributes
+      RETURNING
+        VALUE(p_attributes) TYPE xstring.
 
-    METHODS
-      put_attributes
-        ABSTRACT
-        IMPORTING
-          p_attributes TYPE string.
+    METHODS put_attributes
+      IMPORTING
+        p_attributes TYPE xstring.
 
-    METHODS
-      run
-        ABSTRACT.
+    METHODS run.
+    METHODS run_end.
+    METHODS run_begin.
 
-    METHODS
-      run_end
-        ABSTRACT.
-
-    METHODS
-      run_begin
-        ABSTRACT.
-
-    METHODS
-      get_result_node
-        ABSTRACT
-        IMPORTING
-          p_kind          TYPE c
-        RETURNING
-          VALUE(p_result) TYPE REF TO cl_ci_result_root.
+    METHODS get_result_node
+      IMPORTING
+        p_kind          TYPE c
+      RETURNING
+        VALUE(p_result) TYPE REF TO cl_ci_result_root.
 
     EVENTS message EXPORTING
       VALUE(p_sub_obj_type) TYPE string
@@ -108,9 +93,31 @@ CLASS cl_ci_test_root DEFINITION PUBLIC CREATE PUBLIC ABSTRACT.
       VALUE(p_checksum_1)   TYPE i OPTIONAL
       VALUE(p_inclspec)     TYPE string.
 
+    TYPES: BEGIN OF ty_results,
+             test     TYPE string,
+             sobjtype TYPE string,
+             code     TYPE string,
+           END OF ty_results.
+
+    TYPES ty_results_tt TYPE STANDARD TABLE OF ty_results WITH DEFAULT KEY.
+
+    METHODS clear.
+
+    METHODS
+      consolidate_for_display
+        IMPORTING
+          p_sort_by_user    TYPE string
+          p_sort_by_package TYPE string
+          p_sort_by_object  TYPE string
+        CHANGING
+          p_results         TYPE ty_results_tt
+          p_results_hd      TYPE ANY TABLE.
+
+  PROTECTED SECTION.
+    METHODS add_obj_type IMPORTING objtype TYPE string.
+
     METHODS
       inform
-        ABSTRACT
         IMPORTING
           p_test         TYPE string
           p_code         TYPE char10
@@ -132,34 +139,46 @@ CLASS cl_ci_test_root DEFINITION PUBLIC CREATE PUBLIC ABSTRACT.
           p_comments     TYPE string OPTIONAL.
 * todo, some of the above is from version something?
 
-    TYPES: BEGIN OF ty_results,
-             test     TYPE string,
-             sobjtype TYPE string,
-             code     TYPE string,
-           END OF ty_results.
-
-    TYPES ty_results_tt TYPE STANDARD TABLE OF ty_results WITH DEFAULT KEY.
-
-    METHODS clear.
-
-    METHODS
-      consolidate_for_display
-        ABSTRACT
-        IMPORTING
-          p_sort_by_user    TYPE string
-          p_sort_by_package TYPE string
-          p_sort_by_object  TYPE string
-        CHANGING
-          p_results         TYPE ty_results_tt
-          p_results_hd      TYPE ANY TABLE.
-
-  PROTECTED SECTION.
-    METHODS add_obj_type IMPORTING objtype TYPE string.
   PRIVATE SECTION.
 
 ENDCLASS.
 
 CLASS cl_ci_test_root IMPLEMENTATION.
+  METHOD consolidate_for_display.
+    RETURN. " todo, implement method
+  ENDMETHOD.
+
+  METHOD get_message_text.
+    RETURN. " todo, implement method
+  ENDMETHOD.
+
+  METHOD inform.
+    RETURN. " todo, implement method
+  ENDMETHOD.
+
+  METHOD get_result_node.
+    RETURN. " todo, implement method
+  ENDMETHOD.
+
+  METHOD run_begin.
+    RETURN. " todo, implement method
+  ENDMETHOD.
+
+  METHOD run_end.
+    RETURN. " todo, implement method
+  ENDMETHOD.
+
+  METHOD run.
+    RETURN. " todo, implement method
+  ENDMETHOD.
+
+  METHOD put_attributes.
+    RETURN. " todo, implement method
+  ENDMETHOD.
+
+  METHOD get_attributes.
+    RETURN. " todo, implement method
+  ENDMETHOD.
 
   METHOD add_obj_type.
     RETURN.
