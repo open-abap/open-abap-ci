@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_TTYP" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD40V>
+    <TYPENAME>SCI_ATTTAB</TYPENAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <ROWTYPE>SCI_ATTENT</ROWTYPE>
+    <ROWKIND>S</ROWKIND>
+    <DATATYPE>STRU</DATATYPE>
+    <DDTEXT>Attribute Table for Code Inspector</DDTEXT>
+    <TTYPE>ST</TTYPE>
+   </DD40V>
+  </asx:values>
+ </asx:abap>
+</abapGit>
