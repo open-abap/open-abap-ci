@@ -23,7 +23,7 @@ CLASS cl_ci_test_root DEFINITION PUBLIC CREATE PUBLIC.
           attributes_ok     TYPE abap_bool,
           has_display_consolidation TYPE abap_bool,
           program_name      TYPE string,
-          myname            TYPE string,
+          myname            TYPE sci_chk,
           scimessages       TYPE STANDARD TABLE OF scimessage WITH DEFAULT KEY,
           no_aunit          TYPE string.
 
