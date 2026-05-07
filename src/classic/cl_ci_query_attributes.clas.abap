@@ -3,9 +3,9 @@ CLASS cl_ci_query_attributes DEFINITION PUBLIC.
 
     CLASS-METHODS generic
       IMPORTING
-        p_name         TYPE any
+        p_name         TYPE char30
         p_title        TYPE c
-        p_attributes   TYPE any
+        p_attributes   TYPE sci_atttab
         p_message      TYPE c OPTIONAL
         p_display      TYPE flag
       RETURNING
