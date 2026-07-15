@@ -122,7 +122,7 @@ CLASS cl_ci_test_root DEFINITION PUBLIC CREATE PUBLIC.
           p_test         TYPE sci_chk
           p_code         TYPE char10
           p_sub_obj_type TYPE clike OPTIONAL
-          p_sub_obj_name TYPE string OPTIONAL
+          p_sub_obj_name TYPE clike OPTIONAL
           p_position     TYPE i OPTIONAL
           p_line         TYPE i OPTIONAL
           p_column       TYPE string OPTIONAL
