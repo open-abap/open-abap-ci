@@ -129,10 +129,10 @@ CLASS cl_ci_test_root DEFINITION PUBLIC CREATE PUBLIC.
           p_errcnt       TYPE string OPTIONAL
           p_kind         TYPE char1 OPTIONAL
           p_suppress     TYPE string OPTIONAL
-          p_param_1      TYPE string OPTIONAL
-          p_param_2      TYPE string OPTIONAL
-          p_param_3      TYPE string OPTIONAL
-          p_param_4      TYPE string OPTIONAL
+          p_param_1      TYPE csequence OPTIONAL
+          p_param_2      TYPE csequence OPTIONAL
+          p_param_3      TYPE csequence OPTIONAL
+          p_param_4      TYPE csequence OPTIONAL
           p_inclspec     TYPE string OPTIONAL
           p_detail       TYPE xstring OPTIONAL
           p_checksum_1   TYPE i OPTIONAL
