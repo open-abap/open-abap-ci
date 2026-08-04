@@ -120,7 +120,7 @@ CLASS cl_ci_test_root DEFINITION PUBLIC CREATE PUBLIC.
       inform
         IMPORTING
           p_test         TYPE sci_chk
-          p_code         TYPE char10
+          p_code         TYPE sci_errc
           p_sub_obj_type TYPE clike OPTIONAL
           p_sub_obj_name TYPE clike OPTIONAL
           p_position     TYPE i OPTIONAL
