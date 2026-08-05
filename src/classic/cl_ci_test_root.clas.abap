@@ -36,13 +36,13 @@ CLASS cl_ci_test_root DEFINITION PUBLIC CREATE PUBLIC.
       c_exceptn_imposibl TYPE c LENGTH 1 VALUE '?'.
 
     CONSTANTS:
-      c_type_include TYPE c LENGTH 4 VALUE '????',
-      c_type_program TYPE c LENGTH 4 VALUE '????'.
+      c_type_include TYPE c LENGTH 4 VALUE 'PROG',
+      c_type_program TYPE c LENGTH 4 VALUE '1PRG'.
 
     CONSTANTS:
-      c_note    TYPE c LENGTH 1 VALUE '?',
-      c_warning TYPE c LENGTH 1 VALUE '?',
-      c_error   TYPE c LENGTH 1 VALUE '?'.
+      c_note    TYPE c LENGTH 1 VALUE 'N',
+      c_warning TYPE c LENGTH 1 VALUE 'W',
+      c_error   TYPE c LENGTH 1 VALUE 'E'.
 
     CONSTANTS c_false TYPE c LENGTH 1 VALUE ' '.
 
