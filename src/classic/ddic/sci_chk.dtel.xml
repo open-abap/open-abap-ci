@@ -7,11 +7,16 @@
     <DDLANGUAGE>E</DDLANGUAGE>
     <DATATYPE>CHAR</DATATYPE>
     <LENG>000030</LENG>
+    <HEADLEN>55</HEADLEN>
+    <SCRLEN1>10</SCRLEN1>
+    <SCRLEN2>20</SCRLEN2>
+    <SCRLEN3>40</SCRLEN3>
     <DDTEXT>Code Inspector: Check</DDTEXT>
     <REPTEXT>Check</REPTEXT>
     <SCRTEXT_S>Check</SCRTEXT_S>
     <SCRTEXT_M>Check</SCRTEXT_M>
     <SCRTEXT_L>Check</SCRTEXT_L>
+    <DTELMASTER>E</DTELMASTER>
    </DD04V>
   </asx:values>
  </asx:abap>
