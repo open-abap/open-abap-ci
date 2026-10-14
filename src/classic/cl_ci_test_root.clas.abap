@@ -3,10 +3,10 @@ CLASS cl_ci_test_root DEFINITION PUBLIC CREATE PUBLIC.
   PUBLIC SECTION.
     INTERFACES if_ci_test.
 
-    DATA: category          TYPE string,
-          description       TYPE string,
-          object_type       TYPE char4,
-          object_name       TYPE char40,
+    DATA: category          TYPE string READ-ONLY,
+          description       TYPE string READ-ONLY,
+          object_type       TYPE char4 READ-ONLY,
+          object_name       TYPE char40 READ-ONLY,
           version           TYPE string,
           position          TYPE string,
           has_documentation TYPE abap_bool,
