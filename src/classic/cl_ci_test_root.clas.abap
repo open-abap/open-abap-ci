@@ -70,7 +70,7 @@ CLASS cl_ci_test_root DEFINITION PUBLIC CREATE PUBLIC.
       VALUE(p_sub_obj_name) TYPE string
       VALUE(p_position)     TYPE string
       VALUE(p_line)         TYPE i
-      VALUE(p_column)       TYPE i
+      VALUE(p_column)       TYPE int2
       VALUE(p_errcnt)       TYPE string
       VALUE(p_kind)         TYPE string
       VALUE(p_test)         TYPE string
@@ -116,7 +116,7 @@ CLASS cl_ci_test_root DEFINITION PUBLIC CREATE PUBLIC.
           p_sub_obj_name TYPE clike OPTIONAL
           p_position     TYPE i OPTIONAL
           p_line         TYPE i OPTIONAL
-          p_column       TYPE i OPTIONAL
+          p_column       TYPE int2 OPTIONAL
           p_errcnt       TYPE string OPTIONAL
           p_kind         TYPE char1 OPTIONAL
           p_suppress     TYPE string OPTIONAL
