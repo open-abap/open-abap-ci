@@ -114,7 +114,7 @@ CLASS cl_ci_test_root DEFINITION PUBLIC CREATE PUBLIC.
           p_results_hd      TYPE ANY TABLE.
 
   PROTECTED SECTION.
-    METHODS add_obj_type IMPORTING objtype TYPE string.
+    METHODS add_obj_type IMPORTING objtype TYPE tadir-object.
 
     METHODS
       inform
