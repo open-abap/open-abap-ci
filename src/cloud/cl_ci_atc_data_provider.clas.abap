@@ -1,4 +1,4 @@
-CLASS cl_ci_atc_data_provider DEFINITION PUBLIC.
+CLASS cl_ci_atc_data_provider DEFINITION PUBLIC FINAL CREATE PRIVATE.
   PUBLIC SECTION.
 
     TYPES ty_source_id TYPE x LENGTH 16.
