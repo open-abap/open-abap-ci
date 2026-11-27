@@ -16,7 +16,11 @@ CLASS cl_ci_test_root DEFINITION PUBLIC CREATE PUBLIC.
           program_name      TYPE string,
           myname            TYPE sci_chk,
           scimessages       TYPE scimessages,
-          no_aunit          TYPE string.
+          no_aunit          TYPE string,
+          remote_enabled      TYPE abap_bool,
+          remote_rfc_enabled  TYPE abap_bool,
+          check_scope_enabled TYPE abap_bool,
+          uses_checksum       TYPE abap_bool.
 
     DATA typelist TYPE scit_objt READ-ONLY.
 
@@ -56,6 +60,7 @@ CLASS cl_ci_test_root DEFINITION PUBLIC CREATE PUBLIC.
         p_attributes TYPE xstring.
 
     METHODS run.
+    METHODS get RETURNING VALUE(p_result) TYPE char1.
     METHODS run_end.
     METHODS run_begin.
 
@@ -105,7 +110,7 @@ CLASS cl_ci_test_root DEFINITION PUBLIC CREATE PUBLIC.
           p_results_hd      TYPE ANY TABLE.
 
   PROTECTED SECTION.
-    METHODS add_obj_type IMPORTING objtype TYPE tadir-object.
+    METHODS add_obj_type IMPORTING p_obj_type TYPE tadir-object.
 
     METHODS
       inform
@@ -119,7 +124,7 @@ CLASS cl_ci_test_root DEFINITION PUBLIC CREATE PUBLIC.
           p_column       TYPE int2 OPTIONAL
           p_errcnt       TYPE string OPTIONAL
           p_kind         TYPE char1 OPTIONAL
-          p_suppress     TYPE string OPTIONAL
+          p_suppress     TYPE sci_pcom OPTIONAL
           p_param_1      TYPE csequence OPTIONAL
           p_param_2      TYPE csequence OPTIONAL
           p_param_3      TYPE csequence OPTIONAL
@@ -127,7 +132,7 @@ CLASS cl_ci_test_root DEFINITION PUBLIC CREATE PUBLIC.
           p_inclspec     TYPE string OPTIONAL
           p_detail       TYPE xstring OPTIONAL
           p_checksum_1   TYPE i OPTIONAL
-          p_comments     TYPE string OPTIONAL.
+          p_comments     TYPE string_table OPTIONAL.
 * todo, some of the above is from version something?
 
   PRIVATE SECTION.
@@ -161,6 +166,10 @@ CLASS cl_ci_test_root IMPLEMENTATION.
 
   METHOD run.
     RETURN. " todo, implement method
+  ENDMETHOD.
+
+  METHOD get.
+    p_result = abap_true.
   ENDMETHOD.
 
   METHOD put_attributes.
