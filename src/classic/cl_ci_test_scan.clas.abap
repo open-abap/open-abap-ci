@@ -49,7 +49,7 @@ CLASS cl_ci_test_scan DEFINITION PUBLIC CREATE PUBLIC INHERITING FROM cl_ci_test
       IMPORTING p_n             TYPE i
       RETURNING VALUE(p_result) TYPE i.
 
-    METHODS get RETURNING VALUE(p_result) TYPE char1.
+    METHODS get REDEFINITION.
 
 *********
 
